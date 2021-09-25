@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(14, 14, 14) !important;
+    color: rgb(124, 124, 124);
+}
+
+
+
+.slide{
+    width: 75%;
+    margin: auto;
+}
+
+.carousel-item>img{
+    object-fit: cover;
+}
+
+
+
+
+.showcase{
+    top: 0;
+    width: 100%;
+    height: 75vh;
+    position: relative;
+}
+
+.showcase>.svg{
+    width: 100%;
+    height: 100%;
+    opacity: .07;
+}
+
+.showcase>div:last-child{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.showcase>div>h1{
+    color: #fff;
+    font-size: 3.5rem;
+
+}
+.showcase>div>p{
+    color:  rgb(238, 2, 2);
+}
+
+
+
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #fff;
+}
+
+.contact > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3rem;
+    width: 30%;
+    margin: auto;
+}
+
+.contact>div:not(:last-child){
+    border-right: 1px solid rgba(255, 255, 255, .8);
+}
+
+.contact>div>img{
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+    filter: invert(1);
+    padding: 1rem 0;
+}
+
+.contact>div>p{
+    font-size: 1.5rem;
+    color:  rgb(238, 2, 2);
+}
+
+.contactform{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2rem auto 5rem;
+    align-items: center;
+    line-height: 3rem;
+    position: relative;
+
+}
+
+.contactform > h1{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.form>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.form>div>input{
+    width: 48%;
+    padding: .7rem;
+    background: transparent;
+    outline: transparent;
+    border: 1px solid rgb(59, 59, 59);
+    color: whitesmoke;
+}
+.form>div>input:hover, textarea:hover{
+    border: 1px solid rgb(180, 0, 0);
+    
+}
+
+textarea{
+    width: 100%;
+    background: transparent;
+    margin: 1rem auto;
+    color: whitesmoke;
+    outline: none;
+}
+
+.btn{
+    bottom: -10%;
+    left: 0;
+    width: 25%;
+    position: absolute;
+    background-color: rgb(238, 2, 2);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    transition: ease-in-out 250ms;
+}
+
+.btn:hover{
+    background-color: rgb(128, 2, 2);
+}
+
+
+
+@media screen and (max-width:768px){
+    .contact{
+        flex-direction: column;
+        padding-bottom: 3.5rem;
+    }
+    .contact > div{
+        width: 70%;
+    }
+    .contact>div:not(:last-child){
+        border-right: none;        
+        border-bottom: 1px solid rgba(255, 255, 255, .8);
+    }
+    .contactform{
+        width: 65%;
+        line-height: 1rem;
+    }
+
+    .contactform > h1{
+        padding-bottom: 2rem ;
+    }
+
+    .form>div{
+        padding-top: 1.5rem;
+    }
+
+    .form>div>input{
+        width: 100%;
+        margin: auto;
+    }
+    textarea{
+        width: 100%;
+        margin: 1rem auto;
+    }
+    .btn{
+        width: 55%;
+        bottom: -5%;
+        padding: .7rem;
+    }
+}
+
+@media screen and (max-width:480px){
+    body{
+        font-size: 14px;
+    }
+    .contact{
+        padding-bottom: 2.5rem;
+    }
+    .contact > div{
+        width: 90%;
+        
+    }
+    .contactform{
+        width: 85%;
+    }
+    .contactform > h1{
+        font-size: 1.5rem;
+    }
+    .btn{
+        width: 60%;
+        bottom: -5%;
+        padding: .4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-mini{
+	width: 80vw;
+	height: 600px;
+	position: relative;
+	margin: 2rem auto;
+	overflow: hidden;
+
+}
+
+
+
+ul{
+	list-style: none;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+.carousel-track{
+	position: relative;
+	width: 50vw;
+	height: 100%;
+	overflow: hiden;
+	margin: 0 auto;
+	transition: transform 250ms ease-in;
+}
+
+.carousel-slides{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 0 1rem
+
+}
+
+.carousel-button{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 50%;
+	top: 30%;
+	transform: translateY(-50%);
+	font-size: 5rem;
+	padding: 1rem ;
+    text-align: center;
+    background: transparent;
+    font-weight: 600;
+    color: rgb(180, 0, 0);
+}
+
+.carousel-button--left{
+	left: 5%;
+	z-index: 11;
+}
+
+.carousel-button--right{
+	right: 5%
+}
+
+@media screen and (max-width:480px){
+	.carousel-mini{
+		width: 95vw;
+		max-height: 300px;
+	}
+
+	img{
+		object-fit: contain;
+	}
+}
